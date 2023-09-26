@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Product;
+use Database\Seeders\DatabaseSeeder;
+use Database\Seeders\ProductSeeder;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    (new ProductSeeder)->run();
 });
